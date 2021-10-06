@@ -1,0 +1,47 @@
+#skills {
+    margin-top: 100px;
+}
+
+.skill-head {
+    color: darkgoldenrod;
+    border-left: 4px solid darkred;
+}
+
+@media (min-width: 768px) {
+    .skill-head {
+        font-size: 50px;
+    }
+    .col-md-4 h3 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-head {
+        font-size: 35px;
+    }
+}
+
+.my-skill {
+    margin-top: 10px;
+}
+
+.skill-heading-l {
+    margin-top: 20px;
+    color: #48cbc3;
+    text-align: center;
+}
+
+.skill-heading-f {
+    margin-top: 60px;
+    color: #48cbc3;
+    text-align: center;
+}
+
+.progress {
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: lightgoldenrodyellow;
+}

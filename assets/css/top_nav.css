@@ -1,0 +1,120 @@
+html{
+	scroll-behavior: smooth;
+}
+.top-nav a{
+	color: #d4af37;
+	text-shadow: 1px 1px red;
+}
+
+.top-nav a:hover{
+	text-decoration: underline;
+	color: red;
+	text-shadow: 1px 1px #d4af37;
+}
+
+.check-btn input{
+    opacity: 0;
+    width: 35px;
+    margin: 20px 0px 0px 0px;
+}
+
+.check-btn input:checked ~ span {
+    background-color: red;
+    border-color: gold;
+}
+
+.check-btn span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.check-btn input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-135deg);
+}
+.check-btn span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.check-btn input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(135deg);
+}
+
+.check-btn input:checked ~ span:nth-child(4) {
+    opacity: 0;
+}
+
+.check-btn span {
+	background-color: gold;
+	border: 1px solid red;
+    position: absolute;
+    margin: 25px 0px 0px 0px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    pointer-events: none;
+    transition: all .5s;
+}
+
+/*System*/
+@media (min-width: 769px){
+	.check-btn input, span{
+		display: none;
+	}
+
+	.top-nav{
+		border-bottom: 1px solid white;
+		margin: 10px 15px 0px 0px;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+	.top-nav a{
+		text-decoration: none;
+		padding-left: 40px;
+		font-size: 36px;
+	}
+}
+
+/*Mobile*/
+@media (max-width: 768px){
+	.top-nav{
+		-moz-transition: height .5s;
+		-ms-transition: height .5s;
+		-o-transition: height .5s;
+	    -webkit-transition: height .5s;
+	    transition: height .5s;
+		height: 0;
+		overflow: hidden;
+		width: 80%;
+		display: none;
+		flex-direction: column-reverse;
+		margin: 15px 0px 0px 0px;
+		text-align: center;
+		justify-content: space-between;
+	}
+
+	.check-btn{
+		display: flex;
+	}
+	.check-btn input:checked ~ .top-nav{
+    	animation: opacity-ani 3s;
+	}
+	.top-nav a{
+		text-decoration: none;
+		font-size: 32px;
+	}
+
+	.top-nav a:hover{
+		text-decoration: underline;
+		color: red;
+		text-shadow: 1px 1px #d4af37;
+	}
+}
+
+@keyframes opacity-ani{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}

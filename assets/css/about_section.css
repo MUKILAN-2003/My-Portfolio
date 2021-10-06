@@ -1,0 +1,52 @@
+#about {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.about-head {
+  color: white;
+  border-bottom: 1px solid darkgoldenrod;
+  border-top: 1px solid darkgoldenrod;
+  text-align: center;
+}
+
+.about-inner p {
+  padding: 20px;
+}
+
+.about-inner {
+  padding: 20px;
+  background-image: url("../img/ProgramminG.jpg");
+  background-size: cover;
+}
+
+.blur {
+  backdrop-filter: blur(10px);
+}
+
+@media (min-width: 768px) {
+  .about-p {
+    padding: 20px 0px 20px 0px;
+    text-indent: 175px;
+    color: white;
+    font-size: 30px;
+  }
+  h3.details-about {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-p {
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    color: white;
+    font-size: 23px;
+  }
+  h3.details-about {
+    text-align: center;
+    font-size: 22px;
+    padding-bottom: 20px;
+  }
+}
